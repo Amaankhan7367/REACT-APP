@@ -1,0 +1,53 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+#bg{
+  height: 100vh;
+  width: 100%;
+  
+}
+#bar{
+  height: 2rem;
+  width: 95%;
+  background-color: white;
+  border-radius: 1.5rem;
+  position: absolute;
+  bottom: 4rem;
+  left: 0.5rem;
+  display: flex;
+    align-items: center;
+    justify-content: center
+ 
+}
+#red{
+  background-color: red;
+}
+#green{
+background-color: green;  
+}
+#blue{
+background-color: blue;
+}
+#orange{
+background-color: orange;
+}
+#yellow{
+background-color: yellow;
+}
+#black{
+background-color: black;
+}
+#gold{
+background-color: gold;
+
+}
+button{
+  height: 1.5rem;
+  width:30% ;
+  font-size: 0.5rem;
+  color: #fff ;
+  border-radius: 1rem;
+  border: none;
+}

@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15pt;
+}
+
+#nav {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+#logo {
+  width: 15%;
+  position: absolute;
+  left: 0px;
+}
+img{
+  width: 5vh;
+  height: 5vh;
+}
+#navmain {
+  width: 45%;
+  display: flex;
+  list-style: none; 
+  gap: 1.5rem;
+  justify-content: center;
+  position: absolute;
+  left: 7vh;
+}
+
+
+#main li {
+  display: inline;
+}
+
+#a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 3.3vw;
+}
+
+#btns{
+  position: absolute;
+  right: 1rem;
+  width: 25%;
+  height: 2vh;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+button{
+  width: 200%;
+  height: 3.5vw;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 2vw;
+  background-color: #fff;
+}
+#signup{
+  background-color: green;
+  color: #fff;
+}

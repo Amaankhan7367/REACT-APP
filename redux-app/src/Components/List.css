@@ -1,0 +1,50 @@
+/* UL styling */
+.todo-item {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* LI styling */
+.todo-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #B7BDFF;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Todo text */
+.todo-text {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* Delete button */
+.todo-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+  transition: transform 0.2s ease;
+}
+
+.todo-actions button:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 500px) {
+  .todo-text {
+    font-size: 14px;
+  }
+
+  .todo-actions button {
+    font-size: 16px;
+  }
+}

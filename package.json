@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "react-redux": "^9.2.0",
+    "veat": "^0.2.30",
+    "vite": "^7.1.2"
+  }
+}
