@@ -13,9 +13,22 @@ export class Authservice{
   }
   async createAccount ({ID.unique,email,password,name}){
     try{
-      const userAccount=this.account.create(ID.unique,email,password);
+      const await userAccount=this.account.create({ID.unique,email,password});
+      if(userAccount){
+        //call login function
+      }
+      else{
+        return userAccount;
+      }
     }catch(e){
       throw e;
+    }
+    async login ({email,password}){
+      try{
+        return await this.account.createEmailPasswordSession({email,password})
+      }catch(e){
+        throw e;
+      }
     }
   }
 }
