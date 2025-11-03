@@ -1,14 +1,18 @@
 import conf from '../Conf/conf.js';
-import {Id,clinte,account} from 'appwrite';
+import {Id,Clinte,Account} from 'appwrite';
 
 export class Authservice{
-  clinte =new clinte();
+  clinte =new Clinte();
   account;
   
   constructor(){
     this.clinte 
     .setEndpoint(conf.appwriteUrl)
     .setProject(conf.appwriteProjectId)
+    this.account = new Account(this.clinte);
+  }
+  async createAccount (){
+    const userAccount= 
   }
 }
 
