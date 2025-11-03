@@ -11,8 +11,12 @@ export class Authservice{
     .setProject(conf.appwriteProjectId)
     this.account = new Account(this.clinte);
   }
-  async createAccount (){
-    const userAccount= 
+  async createAccount ({ID.unique,email,password,name}){
+    try{
+      const userAccount=this.account.create(ID.unique,email,password);
+    }catch(e){
+      throw e;
+    }
   }
 }
 
