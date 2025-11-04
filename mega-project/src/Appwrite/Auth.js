@@ -31,6 +31,20 @@ export class Authservice{
         throw e;
       }
     }
+    async getCurrentUser(){
+      try{
+      return this.account.get();
+      }catch(e){
+        throw e;
+      }
+    }
+    async logout(){
+      try{
+        return this.account.delete.sessions();
+      }catch(e){
+        throw e;
+      }
+    }
   }
 }
 
