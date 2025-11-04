@@ -25,10 +25,27 @@ this.clinte
         throw e;
       }
     }
-    async updatePost(){
-      return await this.database.updateDocument(conf.appwriteDatabaseId,conf.appwriteCollectionId,slug,{title,content,userId})
-    }
   }
+    async updatePost(slug{title,content,image,status,userId}){
+      try{
+      return await this.database.updateDocument(conf.appwriteDatabaseId,
+      conf.appwriteCollectionId,
+      slug,
+      {title,content,status})
+      }catch(e){
+        throw e;
+      }
+    }
+    async deletePost(slug){
+      try{
+        return this.database.deleteDocument(conf.appwriteDatabaseId,
+           conf.appwriteCollectionId,
+           slug
+        )
+      }catch(e){
+        throw e;
+      }
+    }
 }
 
 comst service= new Service();
