@@ -14,12 +14,20 @@ this.clinte
     this.bucket=Storage(this.clinte);
   }
   async createPost({title,slug,content,image,status,userId}){
+    try{
     await this.database.createDocument(
       conf.appwriteDatabaseId,
       conf.appwriteCollectionId,
       {title,content,image,status,userId}
       }
       );
+      }catch(e){
+        throw e;
+      }
+    }
+    async updatePost(){
+      return await this.database.updateDocument(conf.appwriteDatabaseId,conf.appwriteCollectionId,slug,{title,content,userId})
+    }
   }
 }
 
