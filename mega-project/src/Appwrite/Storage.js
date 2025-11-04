@@ -15,9 +15,11 @@ this.clinte
   }
   async createPost({title,slug,content,image,status,userId}){
     await this.database.createDocument(
-      conf.appwriteDatabaseId;
-      conf.appwriteCollectionId
-      )
+      conf.appwriteDatabaseId,
+      conf.appwriteCollectionId,
+      {title,content,image,status,userId}
+      }
+      );
   }
 }
 
