@@ -9,7 +9,8 @@ class Service{
 this.clinte 
     .setEndpoint(conf.appwriteUrl)
     .setProject(conf.appwriteProjectId)
-    this.Database(this.clinte)
+    this.database=Databases(this.clinte);
 }
+
 comst service= new Service();
 export default service;
