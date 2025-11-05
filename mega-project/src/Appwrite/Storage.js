@@ -54,6 +54,13 @@ this.clinte
         conf.appwriteCollectionId,
         slug)
     }
+    async getPosts(queries = [Query.equal("status","active")]){
+      return await this.database.listDocument(
+      conf.appwriteDatabaseId,
+      conf.appwriteCollectionId,
+      queries
+      )
+    }
 }
 
 comst service= new Service();
