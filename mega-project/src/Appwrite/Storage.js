@@ -49,17 +49,25 @@ this.clinte
       }
     }
     async getPost(slug){
+      try{
       return await .this.database.getDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug)
+      }catch(e){
+        throw e;
+      }
     }
     async getPosts(queries = [Query.equal("status","active")]){
+      try{
       return await this.database.listDocument(
       conf.appwriteDatabaseId,
       conf.appwriteCollectionId,
       queries
       )
+      }catch(e){
+        throw e;
+      }
     }
 }
 
