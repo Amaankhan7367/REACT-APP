@@ -38,13 +38,21 @@ this.clinte
     }
     async deletePost(slug){
       try{
-        return this.database.deleteDocument(conf.appwriteDatabaseId,
+        await this.database.deleteDocument(conf.appwriteDatabaseId,
            conf.appwriteCollectionId,
            slug
         )
+        return true;
       }catch(e){
         throw e;
+        return false;
       }
+    }
+    async getPost(slug){
+      return await .this.database.getDocument(
+        conf.appwriteDatabaseId,
+        conf.appwriteCollectionId,
+        slug)
     }
 }
 
