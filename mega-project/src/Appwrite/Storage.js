@@ -71,7 +71,19 @@ this.clinte
     }
     
     // File function
-    
+    async uploadFile(file){
+      try{
+        await this.bucket.createFile(
+          conf.appwriteconf.appwriteBucketid,
+          ID.unique(),
+          file
+          )
+          return true
+      }catch(e){
+        throw e;
+        return false;
+      }
+    }
 }
 
 comst service= new Service();
