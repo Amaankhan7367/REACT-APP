@@ -14,10 +14,12 @@ function App() {
     } else {
       dispatch(logout())
     })
-    .finally(()=>{setLoading(false)})
+    .finally(()=>setLoading(false))
   },[])
 
-  return !loading :<div>hello</div>?<div>loading...</div>
+  return !loading 
+  :(<div>hello</div>)
+  ?(<div>loading...</div>)
   
 }
 
