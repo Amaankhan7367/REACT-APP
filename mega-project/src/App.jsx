@@ -17,11 +17,8 @@ function App() {
     .finally(()=>{setLoading(false)})
   },[])
 
-  return (
-    <>
-      
-    </>
-  )
+  return !loading :<div>hello</div>?<div>loading...</div>
+  
 }
 
 export default App
