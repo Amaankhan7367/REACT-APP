@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import {useDispatch} from 'react-redux';
 import {login,logout} from './Store/Authslice.js';
+import {header,footer} from './Components';
 import './App.css'
 
 function App() {
@@ -18,7 +19,13 @@ function App() {
   },[])
 
   return !loading 
-  :(<div>hello</div>)
+  :(<div>
+  <header/>
+  <main>
+  outlet should display here 
+  </main>
+  <footer/>
+  </div>)
   ?(<div>loading...</div>)
   
 }
