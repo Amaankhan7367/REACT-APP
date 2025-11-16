@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
-import {useDispatch} from '';
-import {login,logout} from '';
+import {useDispatch} from 'react-redux';
+import {login,logout} from './Store/Authslice.js';
 import './App.css'
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
     } else {
       dispatch(logout())
     })
+    .finally(()=>{setLoading(false)})
   },[])
 
   return (
